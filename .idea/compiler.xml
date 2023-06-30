@@ -11,6 +11,9 @@
         <module name="EurekaDiscoveryServer" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com.siriusbase.Order.main" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

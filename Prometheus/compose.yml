@@ -1,0 +1,20 @@
+services:
+  shopping:
+    build: .
+    environment:
+      - COMPOSE_PROJECT_NAME
+    ports:
+      - 7106:7106
+    command: echo "I'm running ${COMPOSE_PROJECT_NAME}"
+
+  prometheus:
+    image: 'prometheus:latest'
+    ports:
+      - 9010:9093
+    volumes:
+      - ./prometheus:/etc/prometheus
+      - prometheus-data:/prometheus
+    command: --web.enable-lifecycle  --config.file=/etc/prometheus
+
+volumes:
+  prometheus-data:
