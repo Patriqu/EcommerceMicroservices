@@ -1,0 +1,9 @@
+services:
+  api-gateway:
+    #image: api-gateway:latest
+    build: .
+    environment:
+      - COMPOSE_PROJECT_NAME
+    ports:
+      - 7100:7100
+    command: echo "I'm running ${COMPOSE_PROJECT_NAME}"

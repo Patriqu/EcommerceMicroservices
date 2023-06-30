@@ -1,0 +1,8 @@
+services:
+  shopping:
+    build: .
+    environment:
+      - COMPOSE_PROJECT_NAME
+    ports:
+      - 7001:7001
+    command: echo "I'm running ${COMPOSE_PROJECT_NAME}"

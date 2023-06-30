@@ -1,0 +1,17 @@
+services:
+  spring-rabbitmq:
+      #image: spring-rabbitmq:latest
+      build: .
+      environment:
+        - COMPOSE_PROJECT_NAME
+      ports:
+        - 7105:7105
+      command: echo "I'm running ${COMPOSE_PROJECT_NAME}"
+
+  rabbitmq:
+    image: 'rabbitmq:management'
+    environment:
+      - 'RABBITMQ_DEFAULT_PASS=secret'
+      - 'RABBITMQ_DEFAULT_USER=guest'
+    ports:
+      - '5672'

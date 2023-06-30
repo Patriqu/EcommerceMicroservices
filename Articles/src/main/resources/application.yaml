@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: articles
+  config:
+    import: optional:configserver:http://localhost:7102
+
+server:
+  port: 8085

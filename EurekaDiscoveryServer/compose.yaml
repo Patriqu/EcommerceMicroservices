@@ -1,0 +1,9 @@
+services:
+  eureka-server:
+    #image: eureka-server:latest
+    build: .
+    environment:
+      - COMPOSE_PROJECT_NAME
+    ports:
+      - 7101:7101
+    command: echo "I'm running ${COMPOSE_PROJECT_NAME}"

@@ -1,0 +1,9 @@
+services:
+  config-server:
+    #image: config-server:latest
+    build: .
+    environment:
+      - COMPOSE_PROJECT_NAME
+    ports:
+      - 7102:7102
+    command: echo "I'm running ${COMPOSE_PROJECT_NAME}"

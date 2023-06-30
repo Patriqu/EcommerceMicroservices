@@ -1,0 +1,9 @@
+services:
+  shopping-cart:
+    #image: shopping-cart:latest
+    build: .
+    environment:
+      - COMPOSE_PROJECT_NAME
+    ports:
+      - 7002:7002
+    command: echo "I'm running ${COMPOSE_PROJECT_NAME}"

@@ -1,0 +1,9 @@
+services:
+  order:
+    #image: order:latest
+    build: .
+    environment:
+      - COMPOSE_PROJECT_NAME
+    ports:
+      - 7003:7003
+    command: echo "I'm running ${COMPOSE_PROJECT_NAME}"
