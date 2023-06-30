@@ -4,5 +4,5 @@ services:
     environment:
       - COMPOSE_PROJECT_NAME
     ports:
-      - 7004:7004
+      - 7005:7005
     command: echo "I'm running ${COMPOSE_PROJECT_NAME}"

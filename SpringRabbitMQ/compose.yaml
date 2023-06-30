@@ -1,6 +1,5 @@
 services:
   spring-rabbitmq:
-      #image: spring-rabbitmq:latest
       build: .
       environment:
         - COMPOSE_PROJECT_NAME

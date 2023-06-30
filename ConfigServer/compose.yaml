@@ -1,6 +1,5 @@
 services:
   config-server:
-    #image: config-server:latest
     build: .
     environment:
       - COMPOSE_PROJECT_NAME

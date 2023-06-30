@@ -1,6 +1,5 @@
 services:
   shopping-cart:
-    #image: shopping-cart:latest
     build: .
     environment:
       - COMPOSE_PROJECT_NAME

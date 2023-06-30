@@ -1,6 +1,5 @@
 services:
   order:
-    #image: order:latest
     build: .
     environment:
       - COMPOSE_PROJECT_NAME
