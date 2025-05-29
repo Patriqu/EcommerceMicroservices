@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus-deployment
+  labels:
+    app: prometheus-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: prometheus-deployment
+  template:
+    metadata:
+      name: prometheus-deployment
+      labels:
+        app: prometheus-deployment
+    spec:
+      containers:
+        - name: prometheus-deployment
+          image: nginx
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+      restartPolicy: Always
+      
